@@ -258,7 +258,7 @@ while game_running:
         position = pygame.mouse.get_pos()
         square = get_grid_row_col(position)
         row, col = square[0], square[1] 
-        if piece_to_move and len(extra_jumps) == 0 and (piece_to_move[3] != row and piece_to_move[4] != col):
+        if piece_to_move and len(extra_jumps) == 0:
             UL, UR, DL, DR = False, False, False, False
             oldrow, oldcol  = piece_to_move[3], piece_to_move[4]
             if piece_to_move[0][1] == 'K':
