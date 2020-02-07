@@ -276,9 +276,6 @@ while game_running:
             piece_to_move = None
 
         elif len(extra_jumps) > 0:
-            position = pygame.mouse.get_pos()
-            square = get_grid_row_col(position)
-            row, col = square[0], square[1]
             oldrow, oldcol  = double_jump_piece[1], double_jump_piece[2]
             if [row, col] in extra_jumps:
                 remove_piece(row, col, oldrow, oldcol)
